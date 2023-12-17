@@ -1,4 +1,4 @@
-package igincan.circleapi.entities;
+package igincan.circleapi.classes;
 
 public record Point(double x, double y) {
 

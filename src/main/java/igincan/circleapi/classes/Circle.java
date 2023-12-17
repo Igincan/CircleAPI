@@ -1,4 +1,4 @@
-package igincan.circleapi.entities;
+package igincan.circleapi.classes;
 
 public class Circle {
 
