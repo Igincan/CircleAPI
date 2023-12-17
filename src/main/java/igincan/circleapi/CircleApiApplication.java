@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import igincan.circleapi.entities.requests.IsInsideRequestBody;
+
 @SpringBootApplication
 @RestController
 public class CircleApiApplication {
@@ -15,8 +17,8 @@ public class CircleApiApplication {
 	}
 
 	@PostMapping("/is_inside")
-	public String is_inside(@RequestBody TestRequestBody testRequestBody) {
-		return "Request message is " + testRequestBody.getMessage() + " and value is " + testRequestBody.getValue() + ".";
+	public boolean is_inside(@RequestBody IsInsideRequestBody testRequestBody) {
+		return testRequestBody.circle().is_inside(testRequestBody.point());
 	}
 
 }
