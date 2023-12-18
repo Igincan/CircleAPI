@@ -17,8 +17,8 @@ public class CircleApiApplication {
 	}
 
 	@PostMapping("/is_inside")
-	public boolean is_inside(@RequestBody IsInsideRequestBody testRequestBody) {
-		return testRequestBody.circle().is_inside(testRequestBody.point());
+	public boolean is_inside(@RequestBody IsInsideRequestBody body) {
+		return body.circle().is_inside(body.point());
 	}
 
 }
